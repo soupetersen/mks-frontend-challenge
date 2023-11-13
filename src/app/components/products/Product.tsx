@@ -1,3 +1,4 @@
+import { useCart } from "@/app/hooks/useCart";
 import { Product as ProductData } from "@/app/schema/products";
 import Image from "next/image";
 import styled from "styled-components";
@@ -54,7 +55,7 @@ const ProductTitle = styled.h1`
 	font-weight: 400;
 	font-size: 1rem;
 	line-height: 1.188rem;
-	color: "#2C2C2C";
+	color: ${({ theme }) => theme.colors.gray};
 `;
 
 const ProductDescription = styled.div`
@@ -99,9 +100,15 @@ const AddCartButton = styled.button`
 `;
 
 export const Product = ({ product }: ProductProps) => {
+	const { addToCart } = useCart();
+
+	function handleAddToCart(_product: ProductData) {
+		addToCart(_product);
+	}
+
 	return (
 		<ProductContainer>
-			<div>
+			<div style={{ width: "100%" }}>
 				<Image
 					src={product.photo}
 					alt={product.name}
@@ -121,7 +128,7 @@ export const Product = ({ product }: ProductProps) => {
 					<span>{product.description}</span>
 				</ProductDescription>
 			</DetailsContainer>
-			<AddCartButton>
+			<AddCartButton onClick={() => handleAddToCart(product)}>
 				<Image src="./shopping-bag.svg" alt="cart" width={19} height={18} />
 				<span>COMPRAR</span>
 			</AddCartButton>
