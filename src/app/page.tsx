@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import Products from "./components/products/Products";
+import Products from "./components/Products/Products";
 import Header from "./components/Header/Header";
 
 const HomeContainer = styled.main`

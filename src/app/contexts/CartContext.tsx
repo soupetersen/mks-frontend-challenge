@@ -1,7 +1,7 @@
 import { createContext, ReactNode, useState } from "react";
 import { Product, ProductCart } from "../schema/products";
 
-interface CartContextData {
+export interface CartContextData {
 	cartItems: ProductCart[];
 	cartTotal: number;
 	addToCart: (product: Product) => void;
