@@ -44,6 +44,8 @@ export const Signal = styled.div<{ $borderPosition: "Left" | "Right" }>`
 `;
 
 export const Amount = styled.span`
+	display: flex;
+	justify-content: center;
 	width: 100%;
 	font-size: 1.25rem;
 
