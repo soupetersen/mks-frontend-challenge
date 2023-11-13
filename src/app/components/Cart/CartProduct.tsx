@@ -15,6 +15,7 @@ const CartProductContainer = styled.div`
 	position: relative;
 	/* width: 250px; */
 	height: 100%;
+	max-height: 230px;
 	align-items: center;
 	padding: 1.1rem 1.4rem;
 	gap: 0.75rem;
