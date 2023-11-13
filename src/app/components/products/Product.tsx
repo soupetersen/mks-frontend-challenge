@@ -28,7 +28,7 @@ const DetailsContainer = styled.div`
 	padding: 0 0.875rem;
 `;
 
-const TitleContainer = styled.div<{ textSize: number }>`
+const TitleContainer = styled.div<{ $textSize: number }>`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,7 +42,7 @@ const TitleContainer = styled.div<{ textSize: number }>`
 		padding: 4px;
 
 		> span {
-			font-size: ${({ textSize }) => (textSize > 4 ? "0.75rem" : "0.875rem")};
+			font-size: ${(props) => (props.$textSize > 4 ? "0.75rem" : "0.875rem")};
 			font-weight: 700;
 			line-height: 15px;
 			letter-spacing: 0px;
@@ -112,13 +112,14 @@ export const Product = ({ product }: ProductProps) => {
 				<Image
 					src={product.photo}
 					alt={product.name}
+					priority={true}
 					width={100}
 					height={138}
 					style={{ width: "100%", objectFit: "contain", paddingTop: "0.5rem" }}
 				/>
 			</div>
 			<DetailsContainer>
-				<TitleContainer textSize={Number(product.price).toFixed(0).length}>
+				<TitleContainer $textSize={Number(product.price).toFixed(0).length}>
 					<ProductTitle>{product.name}</ProductTitle>
 					<div>
 						<span>R${Number(product.price).toFixed(0)}</span>

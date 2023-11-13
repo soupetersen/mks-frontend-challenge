@@ -22,7 +22,7 @@ const InputContainer = styled.div`
 	}
 `;
 
-const Signal = styled.div<{ borderPosition: "Left" | "Right" }>`
+const Signal = styled.div<{ $borderPosition: "Left" | "Right" }>`
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -38,7 +38,7 @@ const Signal = styled.div<{ borderPosition: "Left" | "Right" }>`
 		font-weight: 400;
 		width: 100%;
 		${(props) =>
-			props.borderPosition === "Left"
+			props.$borderPosition === "Left"
 				? "border-left: 1px solid #bfbfbf;"
 				: "border-right: 1px solid #bfbfbf;"}
 
@@ -65,12 +65,12 @@ export const Input = ({ product }: InputProps) => {
 		<InputContainer>
 			<Signal
 				onClick={() => removeCartAmount(product.id)}
-				borderPosition="Right"
+				$borderPosition="Right"
 			>
 				<span>-</span>
 			</Signal>
 			<Amount>{product.amount}</Amount>
-			<Signal onClick={() => addCartAmount(product.id)} borderPosition="Left">
+			<Signal onClick={() => addCartAmount(product.id)} $borderPosition="Left">
 				<span>+</span>
 			</Signal>
 		</InputContainer>
