@@ -14,9 +14,18 @@ const HomeContainer = styled.main`
 const Main = styled.main`
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: baseline;
 	width: 100%;
-	height: 100%;
+	height: calc(100% - 8rem);
+	overflow-y: auto;
+	padding: 1rem 0;
+
+	@media only screen and (min-width: 768px) {
+		/* For everything bigger than 768px */
+		align-items: center;
+		padding: 0;
+		height: 100%;
+	}
 `;
 
 export default function Home() {
