@@ -6,7 +6,8 @@ export const CartContainer = styled.div`
 	right: 0;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: 100%;
+	height: -webkit-fill-available;
 	width: 320px;
 	background-color: ${({ theme }) => theme.background.blue};
 	z-index: 2;
