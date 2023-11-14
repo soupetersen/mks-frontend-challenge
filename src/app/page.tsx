@@ -17,7 +17,7 @@ const Main = styled.main`
 	justify-content: center;
 	align-items: baseline;
 	width: 100%;
-	height: calc(100% - 8rem);
+	height: calc(100% - 9rem);
 	overflow-y: auto;
 	padding: 1rem 0;
 
