@@ -3,6 +3,7 @@
 import styled from "styled-components";
 import Products from "./components/Products/Products";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 const HomeContainer = styled.main`
 	display: flex;
@@ -35,6 +36,7 @@ export default function Home() {
 			<Main>
 				<Products />
 			</Main>
+			<Footer />
 		</HomeContainer>
 	);
 }

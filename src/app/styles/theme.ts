@@ -7,6 +7,7 @@ const theme = {
 	background: {
 		white: "#F9F9F9",
 		blue: "#0F52BA",
+		footer:	"#EEEEEE",
 	},
 };
 
