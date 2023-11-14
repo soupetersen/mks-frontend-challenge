@@ -49,31 +49,6 @@ const GlobalStyles = createGlobalStyle`
 	::-webkit-scrollbar-thumb:hover {
 		background: #555;
 	}
-
-	@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-  body {
-    height: 1024px;
-  }
-}
-
-/**
- * iPad with landscape orientation.
- */
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-  body {
-    height: 768px;
-  }
-}
-
-/**
- * iPhone 5
- * You can also target devices with aspect ratio.
- */
-@media screen and (device-aspect-ratio: 40/71) {
-  body {
-    height: 500px;
-  }
-}
 `;
 
 export default GlobalStyles;
