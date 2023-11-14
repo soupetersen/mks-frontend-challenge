@@ -12,20 +12,20 @@ const HomeContainer = styled.main`
 	height: 100%;
 `;
 
-const Main = styled.main`
+const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: baseline;
 	width: 100%;
-	height: calc(100% - 9rem);
+	height: calc(100% - 135px); //header = 101px + 34px footer
 	overflow-y: auto;
 	padding: 1rem 0;
 
 	@media only screen and (min-width: 768px) {
 		/* For everything bigger than 768px */
+		height: 100%;
 		align-items: center;
 		padding: 0;
-		height: 100%;
 	}
 `;
 
@@ -33,9 +33,9 @@ export default function Home() {
 	return (
 		<HomeContainer>
 			<Header />
-			<Main>
+			<Container>
 				<Products />
-			</Main>
+			</Container>
 			<Footer />
 		</HomeContainer>
 	);

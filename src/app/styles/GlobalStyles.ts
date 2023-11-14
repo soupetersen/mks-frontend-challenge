@@ -6,10 +6,10 @@ const GlobalStyles = createGlobalStyle`
   body {
 		padding: 0;
 		margin: 0;
+		height: 100%;
 	}
 
 	body {
-		height: 100vh;
   	width: 100vw;
 		background-color: ${theme.background.white};
 		overflow: hidden;

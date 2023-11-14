@@ -4,7 +4,6 @@ export const CartProductContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	/* width: 250px; */
 	height: 100%;
 	max-height: 230px;
 	align-items: center;
