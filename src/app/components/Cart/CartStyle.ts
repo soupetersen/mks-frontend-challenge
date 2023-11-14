@@ -9,6 +9,7 @@ export const CartContainer = styled.div`
 	height: 100vh;
 	width: 320px;
 	background-color: ${({ theme }) => theme.background.blue};
+	z-index: 2;
 
 	@media only screen and (min-width: 768px) {
 		/* For everything bigger than 768px */
